@@ -73,20 +73,7 @@ const Hero = () => {
             specializing in Machine Learning, Data Visualization, and Business Intelligence.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
-            <a
-              href="#experience"
-              className="bg-gradient-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity animate-gradient cursor-pointer"
-            >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              className="border border-border px-6 py-3 rounded-lg text-foreground hover:bg-secondary transition-colors flex items-center gap-2"
-            >
-              <Mail size={16} /> Get In Touch
-            </a>
-          </div>
+
         </motion.div>
       </div>
 
