@@ -36,7 +36,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/Sakshi_Ankleshwariya_Resume.pdf"
+            href="https://drive.google.com/file/d/1sYBbpcfwKL7L6lFlakNBkvvNQGq1JsAx/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
@@ -70,7 +70,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="/Sakshi_Ankleshwariya_Resume.pdf"
+                href="https://drive.google.com/file/d/1sYBbpcfwKL7L6lFlakNBkvvNQGq1JsAx/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg w-fit"
