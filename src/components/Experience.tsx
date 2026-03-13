@@ -92,53 +92,49 @@ const Experience = () => (
         </p>
       </motion.div>
 
-      <div className="relative">
-        {/* Timeline line */}
-        <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-border" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {experiences.map((exp, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            whileHover={{ y: -4 }}
+            className="group relative"
+          >
+            {/* Hover glow border */}
+            <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-br from-primary/40 to-purple-500/40 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500" />
 
-        <div className="space-y-8">
-          {experiences.map((exp, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative pl-8 md:pl-20"
-            >
-              {/* Dot */}
-              <div className="absolute left-0 md:left-8 top-6 w-3 h-3 -translate-x-[6px] rounded-full bg-primary glow-primary" />
-
-              <div className="glass rounded-xl p-6">
-                <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-3">
-                  <div>
-                    <h3 className="font-heading font-semibold text-lg text-foreground">{exp.role}</h3>
-                    <p className="text-sm text-primary">{exp.company}</p>
-                    <p className="text-xs text-muted-foreground">{exp.location}</p>
-                  </div>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap bg-secondary px-3 py-1 rounded-full">
-                    {exp.period}
-                  </span>
+            <div className="relative glass rounded-xl p-6 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+                <div>
+                  <h3 className="font-heading font-semibold text-lg text-foreground">{exp.role}</h3>
+                  <p className="text-sm text-primary">{exp.company}</p>
+                  <p className="text-xs text-muted-foreground">{exp.location}</p>
                 </div>
-                <ul className="space-y-2 mb-4">
-                  {exp.bullets.map((b, j) => (
-                    <li key={j} className="text-sm text-muted-foreground flex gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">•</span>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2">
-                  {exp.tags.map((t) => (
-                    <span key={t} className="text-xs px-2 py-1 rounded-md bg-secondary text-secondary-foreground">
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                <span className="text-xs text-muted-foreground whitespace-nowrap bg-secondary px-3 py-1 rounded-full self-start">
+                  {exp.period}
+                </span>
               </div>
-            </motion.div>
-          ))}
-        </div>
+              <ul className="space-y-2 mb-4 flex-1">
+                {exp.bullets.map((b, j) => (
+                  <li key={j} className="text-sm text-muted-foreground flex gap-2">
+                    <span className="text-primary mt-1.5 flex-shrink-0">•</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-border/30">
+                {exp.tags.map((t) => (
+                  <span key={t} className="text-xs px-2 py-1 rounded-md bg-secondary text-secondary-foreground">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   </section>

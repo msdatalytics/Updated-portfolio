@@ -98,3 +98,12 @@
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
 }
+
+/* Hide scrollbar for certification slider */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
