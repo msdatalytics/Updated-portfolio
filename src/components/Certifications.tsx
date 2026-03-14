@@ -59,14 +59,7 @@ const certifications = [
         icon: "🌐",
         image: "/certificates/open_source.jpeg",
     },
-    {
-        name: "Luddy Hackathon Winner",
-        issuer: "Indiana University",
-        date: "Nov 2024",
-        color: "from-green-400 to-emerald-500",
-        icon: "🥇",
-        image: "/certificates/hackathon_winner.jpeg",
-    },
+
 ];
 
 interface Cert {
